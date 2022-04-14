@@ -1,57 +1,51 @@
-import PropTypes from "prop-types";
+import propTypes from "prop-types";
 
-function Food({name,picture}){
+function Football({name,picture}){
   return (
   <div>
     <h2>I like {name}</h2>
-    <h4>{rating}/5.0</h4>
     <img src={picture} alt={name} />
   </div>
   );
 }
 
-const foodILike =[
+const footballplayer =[
   {
     id:1,
-    name: 'Kimchi',
-    image: 'https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIP.tY7yWP7-KjRrTilhGr6ZggHaE9%26pid%3DApi&f=1',
-    rating: 5
+    name: 'Diego Godin',
+    image: 'https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIP.YHlAOPm7LElTS-Luov4OwgHaEK%26pid%3DApi&f=1'
   },
   {
     id: 2,
-    name: 'samgyeopsal',
-    image: 'https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIP.vhL7flr5LCRcKWCNr95t3wHaD4%26pid%3DApi&f=1',
-    rating:4.9
+    name: 'Koke',
+    image: 'https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIP.tKe4tBk88YrJWaEM4ixbEAHaEK%26pid%3DApi&f=1'
   },
   {
     id: 3,
-    name: 'Bibimbap',
-    image: 'https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse4.mm.bing.net%2Fth%3Fid%3DOIP.FGbRZ2pPkAjK2LIl9Syw6QHaE7%26pid%3DApi&f=1',
-    rating: 4.8
+    name: 'Diego Forlan',
+    image: 'https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse4.mm.bing.net%2Fth%3Fid%3DOIP.bYagDrmApkyFA0hDELwj5wHaFj%26pid%3DApi&f=1',
+
   },
   {
     id: 4,
-    name: 'Doncasu',
-    image: 'https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse2.mm.bing.net%2Fth%3Fid%3DOIP.mW17Z8uq6unL6xvle_X0YgHaHa%26pid%3DApi&f=1',
-    rating:4.5
+    name: 'Jan Oblak',
+    image: 'https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIP.csc5JWdrnD3_kY0N-ejNqwHaD4%26pid%3DApi&f=1'
   },
   {
     id:5,
-    name: 'Kimbap',
-    image: 'https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIP.muoVibDUIawORHUPymUWfQHaEK%26pid%3DApi&f=1',
-    rating: 5
+    name: 'Fernando Torres',
+    image: 'https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIP.K97PhU2vAnncTQQzg8E2eQHaE8%26pid%3DApi&f=1'
   }
 ];
 function App() {
   return <div>
-    {foodILike.map(dish=> (<Food key={dish.id} name={dish.name} picture={dish.image} rating={dish.rating}/>))}
+    {footballplayer.map(player=> (<Football key={player.id} name={player.name} picture={player.image}/>))}
     </div>;
 }
 
-Food.PropTypes = {
-  name: PropTypes.string.isRequired,
-  picture: PropTypes.string.isRequired,
-  rating: PropTypes.number.isRequired
+Football.propTypes = {
+  name: propTypes.string.isRequired,
+  picture: propTypes.string.isRequired,
 };
 
 export default App;
